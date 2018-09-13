@@ -31,13 +31,15 @@ body{
 
 .container-btn{
   display: flex;
-  padding: 0.5rem;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
-form a{
-  width: 100%;
+.btn_cadastro{
+  width: 40%;
+  border-radius: 4px;
+  margin: 10px;
   display: block;
   text-align: center;
   text-decoration: none;
@@ -47,7 +49,18 @@ form a{
   background: var(--yellow);
   color: rgba(0,0,0,0.9);
   box-shadow: 1px 3px 8px rgba(0,0,0,0.45);
-  border-radius: 6px;
+  border: solid 1px rgb(92, 92, 91);
+}
+
+.btn_acesso{
+  width: 60%;
+  display: block;
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 10px;
+  text-align: center;
+  color: rgba(0,0,0);
 }
 
 .container-entrada{
