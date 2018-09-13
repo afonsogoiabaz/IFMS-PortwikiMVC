@@ -1,0 +1,866 @@
+
+/*********************************************
+ZERANDO COISAS MARGEM E PADDING DO NAVEGADOR
+**********************************************/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*********************************************
+							COISAS NORMAIS
+**********************************************/
+html,
+body{
+	height: 100%;
+	font-family: 'Expletus Sans', cursive;
+}
+
+/*********************************************
+					MENU/HOME-PAGE MOBILE
+**********************************************/
+:root{
+	/*CORES*/
+	--branco8: rgba(255,255,255,0.8);
+	--branco9: rgba(255,255,255,0.9);
+	--vermelho: rgb(208,38,58);
+	--vermelho-effect: rgb(218,8,43);
+	--preto-forte: #000;
+	/*PADDING*/
+	--padding: 1rem;
+	--metade-padding: 0.5rem;
+	/*GROSSURA FONTE*/
+	--espessura-fonte1: 100;
+	--espessura-fonte4: 400;
+	--espessura-fonte6: 600;
+	--espessura-fonte9: 900;
+	/*COR PARA DIV'S FOOTER*/
+	--footer-div-1: #a51d2d;
+	--footer-div-2: #811724;
+	--footer-div-3: #900d1d;
+	/*TRANSIÇÕES*/
+	--transition3: 0.3s;
+	--transition4: 0.4s;  
+	--transition5: 0.5s; 
+}
+
+header{
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+/*MENU DESLIZANTE*/
+.overlay {
+	background: url(../img/fundo-mobile-cadastro.jpg) no-repeat center center fixed;
+	background-size: cover;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 0;
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  
+  overflow-x: hidden;
+  transition: var(--transition3);
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--branco8);		
+  display: block;
+  transition: var(--transition3);
+}
+
+.overlay a:hover,
+.overlay a:focus {
+	color: var(--vermelho-effect);
+	transition: var(--transition3);
+}
+
+.overlay .closebtn {
+	background: none;
+	border: none;
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 30px;
+}
+/*MENU - BOTÃO*/
+.menu{
+	position: absolute;
+	left: 20px;
+	top: 40px;
+	padding: var(--metade-padding);
+}
+
+.menu a{
+	padding: var(--metade-padding);
+}
+
+.saudacao{
+	position: absolute;
+	top: 40px;
+}
+/*TEXTO - BEM VINDO*/
+.saudacao h2{
+	font-family: 'Courgette', cursive;
+	font-size: 2.2rem;
+	font-weight: var(--espessura-fonte4);
+	color: var(--branco9);
+}
+
+nav{
+	display: none;
+}
+
+/*PARA TODA SECTION*/
+
+section{
+	height: 100vh;
+}
+
+/*********************************************
+							SECTION HOME
+**********************************************/
+.home{
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background: url(../img/fundo-mobile.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.text-center{
+	margin: 0 auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.text-center h2{
+	display: none;
+}
+
+.text-center h1{
+	font-weight: var(--espessura-fonte1);
+	color: var(--branco8);
+	font-size: 2.2rem;
+}
+
+.text-center h1 b{
+	font-weight: var(--espessura-fonte9);
+	color: var(--branco9);
+}
+
+.btn-roll{
+	position: absolute;
+	bottom: 0;
+	padding: var(--padding);
+}
+/*********************************************
+							SECTION PORTFÓLIO
+**********************************************/
+.portfolio{
+	height: 100%;
+	background: url(../img/fundo-mobile-design.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.text-pdw{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: var(--branco9);
+}
+
+.text-pdw h2{
+	text-shadow: 2px 2px 0px var(--preto-forte);
+	font-size: 2rem;
+	font-weight: var(--espessura-fonte9);
+	margin-top: 40px;
+}
+
+.text-pdw p{
+	width: 90%;
+	margin-top: 40px;
+	font-size: 1.2rem;
+	margin-top: 2rem;
+	text-align: justify;
+}
+
+.menu{
+	display: block;
+}
+
+.some-mobile{
+	display: none;
+}
+
+.projetos{
+	width: 90%;
+	margin: 50px auto;
+	align-items: center;
+	display: flex;	
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.container-projeto{
+	cursor: pointer;
+	background: var(--preto-forte);
+	display: flex;
+	position: relative;
+	margin-left: 30px;
+	margin-top: 30px; 
+	-webkit-transition: all var(--transition3);
+	-moz-transition: all var(--transition3);
+	-o-transition: all var(--transition3);
+	transition: all var(--transition3);
+}
+
+.container-texto{
+	position: absolute;
+	text-shadow: 1px 2px 1px var(--preto-forte);
+	color: var(--branco8);
+	bottom: 30px;
+	top: 70px;
+	left: 25px;
+	right: 30px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.container-projeto img{
+	background: var(--preto-forte);
+	opacity: 0.5;
+}
+
+.btn-conhecer a{
+	font-size: 14px;
+	font-weight: var(--espessura-fonte6);
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--branco8);
+}
+
+.btn-conhecer{
+	position: absolute;
+	bottom: 20px;
+	left: 30px;
+	width: 140px;
+	height: 35px;
+	display: flex; 
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	background: var(--vermelho);
+	color: var(--branco9);
+}
+
+.btn-conhecer a{
+	display: block;
+}
+
+.container-projeto:hover{
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+.container-projeto img:hover{
+	opacity: 0.6;
+}
+/*********************************************
+							SECTION LAEC
+**********************************************/
+.laec{
+	height: 100%;
+	background: url(../img/fundo-mobile-laec.jpg)no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.texto-topo{
+	text-shadow: 2px 2px 0px var(--preto-forte);
+	width: 80%;
+	margin: 0 auto;
+	font-size: 1rem;
+	text-align: center;
+	font-weight: var(--espessura-fonte9);
+	padding-top: 2rem;
+	color: var(--branco9);
+}
+
+.laec-aprender{
+	padding: var(--padding);
+	margin-top: 40px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background: rgba(0,0,0,0.5);
+	color: var(--branco8);
+}
+
+.laec-aprender p{
+	padding: var(--metade-padding);
+	width: 90%;
+	text-align: justify;
+	font-size: 1.2rem;
+}
+
+.btn-saiba{
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	width: 120px;
+	height: 60px;
+	border-radius: 10px;
+	background: rgb(208,38,58);
+	border: solid 1px var(--branco9);
+	transition: var(--transition4);
+}
+
+.btn-saiba:hover{
+	background: rgba(0,0,0,0.8);
+	border: solid 2px var(--branco9);
+	transition: var(--transition4);
+}
+
+.btn-saiba a{
+	text-shadow: 2px 2px 3px var(--preto-forte);
+	font-weight: var(--espessura-fonte1);
+	text-decoration: none;
+	color: var(--branco8);
+}
+/*********************************************
+								FOOTER
+**********************************************/
+.quemSou,
+.contato,
+.redes-sociais{
+	padding: var(--padding);
+	color: var(--branco8);
+	background: var(--footer-div-1);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.some-mobile-tablet{
+	display: none;
+}
+
+.some-web-mobile{
+	display: block;
+}
+
+.quemSou h3,
+.contato h3,
+.redes-sociais h3{
+	text-shadow: 2px 1px 1px var(--preto-forte);
+}
+
+.quemSou h3,
+.contato h3,
+.redes-sociais{
+	text-align: center;
+	color: var(--branco9);
+	font-size: 2.2rem;
+	font-weight: var(--espessura-fonte4);
+}
+
+.quemSou img{
+	transition: var(--transition4);
+}
+
+.quemSou h4{
+	width: 90%;
+	text-align: center;
+	font-weight: var(--espessura-fonte4);
+	color: var(--branco9);
+	font-size: 1.2rem;
+	margin-bottom: 80px;
+}
+
+.quemSou p{
+	width: 95%;
+	font-size: 1.1rem;
+	text-align: justify;
+}
+
+.contato{
+	background: var(--footer-div-2);
+}
+
+.contato h3,
+.redes-sociais h3{
+	font-size: 1.6rem;
+	font-weight: var(--espessura-fonte4);
+	margin-top: 30px;
+}
+
+.contato h4{
+	width: 90%;
+	text-align: center;
+	font-weight: var(--espessura-fonte4);
+	color: var(--branco9);
+	margin-bottom: 60px;
+	font-size: 1.2rem;
+}
+
+.contato ul{
+	flex-direction: column;
+}
+
+.contato ul,
+.redes-sociais ul{
+	display: flex;
+	list-style: none;
+	flex-wrap: wrap;
+}
+
+.redes-sociais h3{
+	margin-bottom: 40px;
+}
+
+.contato li,
+.redes-sociais li{
+	padding: 10px;
+	margin: 0 auto;
+}
+
+.redes-sociais ul{
+	width: 70%;
+}
+
+.redes-sociais{
+	background: var(--footer-div-3);
+}
+
+.redes-sociais a{
+	width: 80%;
+	font-size: 1rem;
+	padding: var(--metade-padding);
+	color: var(--branco8);
+	text-decoration: none;
+
+	transition: var(--transition4);
+}
+
+.redes-sociais a:hover{
+	font-weight: var(--espessura-fonte9);
+	transition: var(--transition4);
+}
+
+.quemSou img:hover{
+	transform: scale(1.1);
+	transition: var(--transition4);
+}
+/*********************************************
+			MEDIA SCREEN DO MENU DESLIZANTE
+**********************************************/
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/*********************************************
+			FORMATO WEB - LARGURA TELA > 700PX
+**********************************************/
+
+@media screen and (min-width: 700px){
+
+
+/*********************************************
+						MENU/HOME PAGE - WEB
+**********************************************/
+	nav{
+		position: absolute;
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+
+	nav ul{
+		display: flex;
+		padding: var(--padding);
+		list-style: none;
+	}
+
+	nav a{
+		padding: var(--padding);
+		font-size: 1rem;
+		color: var(--branco8);
+		font-weight: var(--espessura-fonte6);
+		display: block;
+		text-decoration: none;
+		text-transform: uppercase;
+
+		transition: var(--transition5);
+	}
+
+	nav a:hover{
+		color: red;
+		transition: var(--transition5);
+	}
+
+	.menu,
+	.saudacao{
+		display: none;
+	}
+
+	.btn-roll{
+		right: 0;
+	}
+
+	nav a,
+	.btn-roll a,
+	.btn-conhecer a,
+	.btn-saiba a{
+		outline: none;
+	}
+
+/*********************************************
+							SECTION HOME
+**********************************************/
+
+	.text-center h2{
+		font-size: 2.3rem;
+		font-weight: var(--espessura-fonte4);
+		font-family: 'Courgette', cursive;
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.text-center h1{
+		font-size: 2.5rem;
+	}
+/*********************************************
+						SECTION PORTFÓLIO
+**********************************************/
+	.portfolio{
+		height: 100%;
+		background: url(../img/fundo-web-design-1.jpg)no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	.projetos{
+		margin-top: 100px;
+	}
+	.some-web{
+		display: none;
+	}
+
+	.some-mobile{
+		display: block;
+	}
+
+	.text-pdw{
+		margin-right: 50px;
+		align-items: flex-end;
+	}
+
+	.text-pdw h2{
+		font-size: 2.5rem;
+		margin-right: 60px;
+	}
+
+	.text-pdw p{
+		font-size: 1.8rem;
+		width: 58%;
+	}
+
+	.container-texto{
+		bottom: 40px;
+		left: 35px;
+		top: 80px;
+		font-size: 18px;
+		right: 40px;
+	}
+
+	.text-alter{
+		line-height: 30px;
+	}
+	.btn-conhecer{
+		left: 50px;
+		right: 50px;
+	}
+/*********************************************
+						SECTION LAEC
+**********************************************/
+	.laec{
+		height: 100%;
+		background: url(../img/fundo-web-laec-1.jpg)no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	.texto-topo h2{
+		margin: 0 auto;
+		font-size: 1.9rem;
+	}
+
+	.laec-aprender{
+		margin-top: 80px;
+		position: relative;
+		align-items: unset;
+		flex-direction: row;
+	}
+
+	.laec-aprender p{
+		width: 70%;
+		font-size: 1.4rem;
+	}
+
+	.btn-saiba{
+		margin: 40px auto;
+	}
+
+/*********************************************
+						SECTION APRENDER
+**********************************************/
+	.aprender{
+		background: url(../img/fundo-web-aprender.jpg) no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	.container-tela-meio{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 60%;
+		height: 50%;
+		margin: 0 auto;
+	}
+	.aprender p{
+		font-size: 1.5rem;
+		height: 25%;
+	}
+/**********************************************
+							FOOTER
+**********************************************/
+	footer{
+		display: grid;
+		height: 100vh;
+	}
+
+	.quemSou{
+		grid-column: 3/4;
+		grid-row: 1/3;
+	}
+
+	.contato{
+		grid-column: 4/4;
+		grid-row: 1/2;
+	}
+
+	.redes-sociais{
+		grid-column: 4/4;
+		grid-row: 2/2;
+	}
+
+	.quemSou h4{
+		margin-bottom: 30px; 
+	}
+
+	.contato ul{
+		flex-direction: column;
+	}
+
+	.contato h3,
+	.redes-sociais h3{
+		font-size: 2rem;
+	}
+
+	.contato h3{
+		margin-bottom: 0;
+	}
+
+	.contato h4{
+		font-size: 1rem;
+	}
+
+	.contato li,
+	.redes-sociais a{
+		font-size: 1.2rem;
+	}
+
+	.redes-sociais ul{
+		width: 70%;	
+	}
+}
+/**********************************************
+			FORMATO WEB - LARGURA > 1200PX
+**********************************************/
+
+@media screen and (min-width: 1200px){
+	
+/*********************************************
+								HOME-PAGE
+**********************************************/
+	.home{
+		background: url(../img/fundo-web.jpg) no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+	/*MENU-WEB*/
+	
+	nav{
+		position: absolute;
+		right: 0;
+	}
+
+	/*SECTION HOME*/
+	.text-center h2{
+		font-size: 2.5rem;
+	}
+
+	.text-center h1{
+		font-size: 3rem;
+	}	
+/*********************************************
+							HOME-PORTFÓLIO
+**********************************************/
+	.portfolio{
+		height: 100%;
+	}
+	.text-pdw h2{
+		font-size: 3rem;
+	}
+	.text-pdw p{
+		width: 50vw;
+	}
+	.projetos{
+		margin-top: 100px;
+	}
+
+	.container-projeto{
+		transform: scale(1.2);
+		margin: 40px;
+	}
+
+	.container-projeto:hover{
+		transform: scale(1.4);
+	}
+/*********************************************
+							SECTION LAEC
+**********************************************/
+	.texto-topo h2{
+		font-size: 2.6rem;
+		width: 50%;
+	}
+
+	.laec-aprender p{
+		width: 55%;
+		font-size: 1.6rem;
+		margin: auto 190px;
+	}
+
+	.btn-saiba{
+		margin-left: 30px;
+		width: 150px;
+		height: 90px;
+	}
+
+	.btn-saiba a{
+		font-size: 1.5rem;
+	}
+/*********************************************
+								FOOTER
+**********************************************/
+	.quemSou{
+		grid-column: 1/3;
+		grid-row: 1/3;
+	}
+
+	.contato{
+		grid-column: 3/3;
+		grid-row: 1/2;
+	}
+
+	.redes-sociais{
+		grid-column: 3/3;
+		grid-row: 2/2;
+	}
+	.some-mobile-tablet{
+		display: block;
+	}
+
+	.some-web-mobile{
+		display: none;
+	}
+
+	.quemSou p{
+		width: 60%;
+		font-size: 1.4rem;
+	}
+
+	.quemSou h4{
+		font-size: 1.5rem;
+	}
+
+	.quemSou h3{
+		font-size: 3rem;
+	}
+
+	.contato h3,
+	.redes-sociais h3{
+		font-size: 2.2rem;
+	}
+
+	.redes-sociais h3{
+		margin-bottom: 40px;
+	}
+
+	.redes-sociais ul{
+		width: 60%;
+	}
+}
