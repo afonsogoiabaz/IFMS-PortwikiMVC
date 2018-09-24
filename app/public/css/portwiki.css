@@ -24,6 +24,11 @@ header{
 	position: relative;
 }
 
+header a{
+	text-decoration: none;
+	color: rgba(0,0,0,0.9);
+}
+
 .esq-seta{
 	position: absolute;
 	left: 20px;
@@ -231,10 +236,6 @@ a{
 	outline: none;
 }
 
-.curva-baixo img{
-	width: 100%;
-}
-
 footer{
 	display: flex;
 	align-items: center;
@@ -242,7 +243,7 @@ footer{
 	flex-direction: column;
 	background: rgba(0,0,0,0.9);
 	padding: 1rem;
-	height: 10vh;
+	height: 8vh;
 	color: rgba(255,255,255,0.8);
 }
 
@@ -260,15 +261,15 @@ footer a{
 @media screen and (min-width: 700px){
 
 	.logo h1{
-		font-size: 24px;
+		font-size: 20px;
 	}
 
 	.apresentation{
-		height: 92vh;
+		height: 91vh;
 	}
 
 	.container-apresentation h2{
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 	}
 
 	.container-apresentation p{
@@ -313,13 +314,13 @@ footer a{
 	}
 
 	.container-apresentation h2{
-		font-size: 2.1rem;
+		font-size: 1.8rem;
 		color: rgba(255,255,255,0,9);
 	}
 
 	.container-apresentation p{
 		width: 90%;
-		font-size: 1.1rem;
+		font-size: 1rem;
 		color: rgba(255,255,255,0.9);
 	}
 	.botoes a{
