@@ -71,11 +71,26 @@ input[type="submit"]{
   text-align: center;
   margin: 10px auto;
   width: 70%;
-
 }
 
 .container-entradaa a{
   color: rgba(0,0,0,0.9);
+}
+
+.erros{
+  background: rgba(0,0,0, 0.7);
+  color: rgba(255,255,255,0.9);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  padding-left: 0.5rem;
+  font-weight: 600;
+}
+
+.erros li {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 700px){
@@ -88,6 +103,10 @@ input[type="submit"]{
 
   .form_cadast{
     width: 500px;
+  }
+
+  .erros{
+    width: 490px;
   }
 
   .form_cadast h2{

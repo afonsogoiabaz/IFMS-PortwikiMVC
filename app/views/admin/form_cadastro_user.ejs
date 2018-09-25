@@ -5,6 +5,7 @@
 		<!-- Links e metas -->
 		<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <base href="/">
     <link rel="stylesheet" type="text/css" href="css/portwiki.css">
     <link rel="stylesheet" type="text/css" href="css/cadastro.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
@@ -20,13 +21,13 @@
     </header>
 
     <main>
-      <section class="main">
+      <section class="main">  
         <% if (validacao) { %>
-          <ul>
+          <ol class="erros" id="errosCss">
             <% for (var i = 0; i< validacao.length; i++) { %>
             <li><%= validacao[i].msg %></li>
             <% } %>
-          </ul>
+          </ol>
         <% } %>
         <form class="form_cadast" action="/portwiki/salvar" method="post">
           <h2>Cadastre-se para acessar os cursos!</h2>
@@ -51,7 +52,7 @@
           </div>
 
           <div class="container-entrada">
-            <input type="submit" value="Finalizar cadastro">
+            <input type="submit" value="Finalizar cadastro" id="cadastro">
           </div>
 
           <div class="container-entradaa">
@@ -63,6 +64,6 @@
     <footer>
 			<p>&copy; Afonso Goiaba</p>
 			<a href="https://github.com/afonsogoiaba">github.com/afonsogoiaba</a>
-	  </footer>
+    </footer>
   </body>
 </html>
