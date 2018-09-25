@@ -6,7 +6,6 @@
 		<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/portwiki.css">
-    
     <link rel="stylesheet" type="text/css" href="css/cadastro.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 	</head>
@@ -22,21 +21,28 @@
 
     <main>
       <section class="main">
+        <% if (validacao) { %>
+          <ul>
+            <% for (var i = 0; i< validacao.length; i++) { %>
+            <li><%= validacao[i].msg %></li>
+            <% } %>
+          </ul>
+        <% } %>
         <form class="form_cadast" action="/portwiki/salvar" method="post">
           <h2>Cadastre-se para acessar os cursos!</h2>
           <div class="container-entrada">
             <label for="nome_completo">Nome Completo:</label>
-            <input type="text" id="nome_completo" name="nome_completo">
+            <input type="text" id="nome_completo" name="nome_completo" value="<%=usuario.nome_completo %>">
           </div>
 
           <div class="container-entrada">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" value="<%= usuario.email %>">
           </div>
 
           <div class="container-entrada">
             <label for="cpf">CPF:</label>
-            <input type="text" id="cpf" name="cpf">
+            <input type="text" id="cpf" name="cpf" value="<%= usuario.cpf %>">
           </div>
 
           <div class="container-entrada">

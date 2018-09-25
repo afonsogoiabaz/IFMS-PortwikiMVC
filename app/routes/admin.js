@@ -1,6 +1,6 @@
 module.exports = function(app){
 	app.get('/form_cadastro_user', function(req, res){
-		res.render('admin/form_cadastro_user');
+		res.render('admin/form_cadastro_user', {validacao:{}, usuario:{}});
 	});
 
 	app.post('/portwiki/salvar', function(req, res){
@@ -14,7 +14,7 @@ module.exports = function(app){
 		console.log(erros);
 
 		if(erros){
-			res.render("admin/form_cadastro_user", {validacao : erros});
+			res.render("admin/form_cadastro_user", {validacao : erros, usuario : usuario});
 			return;
 		}
 
