@@ -31,3 +31,7 @@ module.exports.portwiki_salvar = function(app, req, res){
 	res.redirect('/portwiki');
 	});
 }
+
+module.exports.curso_html = function(app, req, res){
+  res.render("cursos/curso_html");
+}

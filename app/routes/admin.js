@@ -14,4 +14,7 @@ module.exports = function(app){
 	app.get('/form_login_user', function(req, res){
 		app.app.controllers.admin.form_login_user(app, req, res);
 	});
+	app.get('/curso_html', function(req, res){
+		app.app.controllers.admin.curso_html(app, req, res);
+	});
 }

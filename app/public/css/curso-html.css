@@ -1,0 +1,120 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.home-curso{
+  height: 100%;
+  display: grid;
+  grid-template-columns: 15%;
+  grid-template-rows: 100%;
+  grid-template-areas: "lista conteudo conteudo"
+}
+
+.name{
+  padding: 1rem 0rem 1rem 0rem;
+  text-align: center;
+  background: rgba(255,255,255);
+}
+
+.name h2{
+  font-weight: normal;
+}
+
+.lista{
+  overflow-y: scroll;
+  height: 100%;
+  grid-area: lista;
+  background: rgb(63, 62, 62);
+  box-shadow: 2px 0px 20px rgba(0,0,0,0.46);
+}
+
+.lista ul{
+  padding: 10px;
+  list-style: none;
+}
+
+.lista a{
+  display: block;
+  padding: 20px;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  border-bottom: solid 1px	rgb(224, 215, 47);
+}
+
+.main-layout{
+  grid-area: conteudo;
+  padding: 1rem;
+  text-align: center;
+}
+
+.main-layout h2{
+  font-size: 1.6rem;
+  border-bottom: solid 1px rgb(0,0,0);
+  width: 100%;
+  text-align: initial;
+  padding: 0.5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: normal;
+
+}
+
+.nome-desc{
+  padding: 0.5rem;
+}
+
+.nome-desc h3{
+  text-align: initial;
+}
+
+.text-desc{
+  margin-top: 10px;
+  display: block;
+  padding: 0.6rem;  
+  text-align: justify;
+  color: #000;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+.nome-desc iframe{
+  outline: none;
+  border: none;
+}
+
+.aula{
+  padding: 10px;
+  box-shadow: 0px 3px 30px rgba(0,0,0,0.25);
+  width: 90%;
+  margin: 0 auto;
+}
+
+.top-aula{
+  background: rgb(224, 215, 47);
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 1.5rem;
+}
+
+.texto p{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.texto h3{
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+
+.top-aula p,
+.top-aula h3{
+  text-align: initial;
+}
+
+.top-aula img{
+  margin: 0px 10px 0px 0px;
+}
