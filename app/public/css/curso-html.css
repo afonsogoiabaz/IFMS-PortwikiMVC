@@ -12,13 +12,16 @@
 }
 
 .name{
-  padding: 1rem 0rem 1rem 0rem;
+  padding: 1.5rem 0rem 1.5rem 0rem;
   text-align: center;
-  background: rgba(255,255,255);
+  background: rgba(0,0,0,0.6);
 }
 
 .name h2{
+  text-transform: uppercase;
+  font-size: 1.2rem;
   font-weight: normal;
+  color: rgba(255,255,255,0.9);
 }
 
 .lista{
@@ -26,7 +29,6 @@
   height: 100%;
   grid-area: lista;
   background: rgb(63, 62, 62);
-  box-shadow: 2px 0px 20px rgba(0,0,0,0.46);
 }
 
 .lista ul{
@@ -47,6 +49,7 @@
   grid-area: conteudo;
   padding: 1rem;
   text-align: center;
+  position: relative;
 }
 
 .main-layout h2{
@@ -58,7 +61,11 @@
   margin-top: 20px;
   margin-bottom: 20px;
   font-weight: normal;
+}
 
+.main-vrau{
+  display: flex;
+  justify-content: space-around;
 }
 
 .nome-desc{
@@ -87,8 +94,7 @@
 .aula{
   padding: 10px;
   box-shadow: 0px 3px 30px rgba(0,0,0,0.25);
-  width: 90%;
-  margin: 0 auto;
+  width: 940px;
 }
 
 .top-aula{
@@ -117,4 +123,64 @@
 
 .top-aula img{
   margin: 0px 10px 0px 0px;
+}
+
+.info-curso{
+  width: 500px;
+  height: 550px;
+  padding: 1rem;
+  box-shadow: 0px 3px 30px rgba(0,0,0,0.25);
+}
+
+.curso iframe{
+  background: url(../img/vrau.gif) no-repeat center center;
+}
+
+.info-curso ul{
+  margin-top: 15px;
+  padding: 0.5rem;
+  list-style: none;
+  text-align: initial;
+  justify-content: flex-start;
+}
+
+.info-curso{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.info-curso li{
+  padding: 5px;
+}
+
+.info-curso h3{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.linha{
+  width: 100%;
+  border: solid 2px rgb(224, 215, 47);
+}
+
+.autor-curso img{
+  border-radius: 100px;
+}
+
+.autor-curso h3{
+  text-transform: none;
+}
+
+.autor-curso{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.autor-curso span{
+  color: rgba(0,0,0,0.78);
+  font-style: italic;
+  margin-bottom: 10px;
 }
