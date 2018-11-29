@@ -2,9 +2,6 @@ module.exports.form_cadastro_user = function(app, req, res){
   res.render("admin/form_cadastro_user", {validacao:{}, usuario:{}});
 }
 
-module.exports.form_login_user = function(app, req, res){
-  res.render("admin/form_login_user");
-}
 
 module.exports.portwiki = function(app, req, res){
   res.render("portwiki/portwiki");
