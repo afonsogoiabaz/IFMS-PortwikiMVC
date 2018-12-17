@@ -13,11 +13,33 @@
 	<body>
 		<!-- Cabeçalho -->
 		<header>
-      <a href="portwiki" class="esq-seta"><img src="img/voltar.png" width="40"></a>
-			<div class="logo">
-				<img src="img/logo-portwiki.png" width="40" height="40">
-				<a href="portwiki"><h1>Port<b>wiki</b></h1></a>
-			</div>
+      <div class="menu">
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <!-- "menu" -->
+          <div id="nav" class="overlay-content">
+            <a href="/portwiki">Home</a>
+            <a href="/form_cadastro_user">Cadastro</a>
+            <a href="/form_login_user">Login</a>
+          </div>
+        </div>
+          <a href="#">
+            <img src="img/menu.png" width="40" height="30" onclick="openNav()">
+          </a>
+      </div>
+
+      <div class="logo">
+        <img src="img/logo-portwiki.png" width="40" height="40">
+        <a href="portwiki"><h1>Port<b>wiki</b></h1></a>
+      </div>
+      <!-- Menu web-->
+      <nav>
+        <ul>
+          <li><a href="/portwiki">Home</a></li>
+          <li><a href="/form_cadastro_user">Cadastro</a></li>
+          <li><a href="/form_login_user">Login</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -32,8 +54,13 @@
         <form class="form_cadast" action="/portwiki/salvar" method="post">
           <h2>Cadastre-se para acessar os cursos!</h2>
           <div class="container-entrada">
-            <label for="nome_completo">Nome Completo:</label>
-            <input type="text" id="nome_completo" name="nome_completo" value="<%=usuario.nome_completo %>">
+            <label for="nome">Nome:</label>
+            <input type="text" id="sobrenome" name="nome" value="<%=usuario.nome %>">
+          </div>
+
+          <div class="container-entrada">
+            <label for="sobrenome">Sobrenome:</label>
+            <input type="text" id="sobrenome" name="sobrenome" value="<%=usuario.sobrenome %>">
           </div>
 
           <div class="container-entrada">
@@ -44,6 +71,11 @@
           <div class="container-entrada">
             <label for="cpf">CPF:</label>
             <input type="text" id="cpf" name="cpf" value="<%= usuario.cpf %>">
+          </div>
+
+          <div class="container-entrada">
+            <label for="desc_usuario">Biografia:</label>
+            <input type="text" id="biografia" name="desc_usuario" value="<%= usuario.desc_usuario %>">
           </div>
 
           <div class="container-entrada">

@@ -11,6 +11,9 @@ module.exports.logar_entrar=function(app, req, res){
 			res.redirect('/form_login_user');
 		}else{
 			res.redirect('/portwiki');
+			console.log(result[0].nome);
+			// window.document.querySelector('.botoes').style.display = 'none';
+			// window.document.querySelector('.container-apresentation h2').innerHTML = 'Seja muito bem vindo, <b>'+result[0].nome_completo+'</b>'
 		}
 	})
 }

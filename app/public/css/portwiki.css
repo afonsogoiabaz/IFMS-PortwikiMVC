@@ -17,16 +17,86 @@ body{
 header{
 	background: var(--yellow);	
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 1rem;
+	padding: 1.3rem;
 	position: relative;
 }
 
 header a{
 	text-decoration: none;
 	color: rgba(0,0,0,0.9);
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+header ul{
+	list-style: none;
+	display: flex;
+}
+
+nav a{
+	margin: 10px;
+}
+/*MENU DESLIZANTE*/
+.overlay {
+	background: rgb(0,0,0);
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 0;
+  overflow-x: hidden;
+  transition: 0.3s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);		
+  display: block;
+  transition: 0.3s;
+  font-weight: normal;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+	color: rgba(255,255,255,0.6);
+	transition: 0.3s;
+}
+
+.overlay .closebtn {
+	background: none;
+	border: none;
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 30px;
+}
+/*MENU - BOTÃO*/
+.menu{
+	position: absolute;
+	left: 10px;
+	padding: 0.5rem;
+}
+
+.menu a{
+	padding: 0.5rem;
+}
+
+nav{
+	display: none;
 }
 
 .esq-seta{
@@ -125,7 +195,6 @@ h1 b{
 
 .curve{
 	position: absolute;
-	z-index: 999;
 	bottom: 0;
 	left: 0;
 	width: 100%;
@@ -179,8 +248,9 @@ h1 b{
 .top-html h2,
 .top-css h2,
 .top-js h2{
-	border-bottom: solid 1px rgba(255,255,255,0.9);
 	font-size: 20px;
+	width: 90%;
+	margin: 0 auto;
 	text-align: center;
 	text-transform: uppercase;
 	color: rgba(255,255,255,0.8);
@@ -258,10 +328,45 @@ footer a{
 	color: rgba(255,255,255,0.5);
 }
 
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
 @media screen and (min-width: 700px){
 
-	.logo h1{
-		font-size: 20px;
+	header{
+		justify-content: space-between;
+	}
+	nav{
+		align-items: center;
+		display: flex;
+	}
+
+	nav ul{
+		display: flex;
+		list-style: none;
+	}
+
+	nav a{
+		font-size: 1rem;
+		color: rgba(0,0,0,0.8);
+		font-weight: 600;
+		display: block;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	.menu{
+		display: none;
+	}
+
+	nav a{
+		outline: none;
 	}
 
 	.apresentation{
@@ -314,13 +419,14 @@ footer a{
 	}
 
 	.container-apresentation h2{
-		font-size: 1.8rem;
+		font-size: 2rem;
 		color: rgba(255,255,255,0,9);
 	}
 
 	.container-apresentation p{
-		width: 90%;
-		font-size: 1rem;
+		width: 100%;
+		font-size: 1.2rem;
+		font-weight: 300;
 		color: rgba(255,255,255,0.9);
 	}
 	.botoes a{

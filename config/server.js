@@ -2,6 +2,7 @@ var express = require('express');
 var consign = require('consign');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
+var session = require('express-session');
 
 var app = express();
 app.use(express.static('./app/public'));

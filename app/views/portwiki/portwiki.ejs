@@ -7,15 +7,40 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link rel="stylesheet" type="text/css" href="css/portwiki.css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 	</head>
 	<body>
 		<!-- Cabeçalho -->
 		<header>
-			<a href="/" class="esq-seta"><img src="img/voltar.png"	width="40"></a>
+			<div class="menu">
+				<div id="myNav" class="overlay">
+  				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  				<!-- "menu" -->
+  				<div id="nav" class="overlay-content">
+    				<a href="/portwiki">Home</a>
+    				<a href="#cursos_tutoriais">Cursos e tutoriais</a>
+   					<a href="/form_cadastro_user">Cadastro</a>
+    				<a href="/form_login_user">Login</a>
+  				</div>
+				</div>
+					<a href="#">
+						<img src="img/menu.png" width="40" height="30" onclick="openNav()">
+					</a>
+			</div>
+
 			<div class="logo">
 				<img src="img/logo-portwiki.png" width="40" height="40">
 				<a href="portwiki"><h1>Port<b>wiki</b></h1></a>
 			</div>
+			<!-- Menu web-->
+			<nav>
+				<ul>
+					<li><a href="/portwiki">Home</a></li>
+					<li><a href="#cursos_tutoriais">Cursos e tutoriais</a></li>
+					<li><a href="/form_cadastro_user">Cadastro</a></li>
+					<li><a href="/form_login_user">Login</a></li>
+				</ul>
+			</nav>
 		</header>
 
 		<main>
@@ -24,17 +49,7 @@
 				<div class="container-apresentation">
 					<h2>Seja muito bem vindo, <b>Programador!</b></h2>
 
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint 	occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Seja bem vindo a plataforma de cursos e tutoriais online do seu Campus! Este site foi desenvolvido durante o trabalho de conclusão de curso e, antes disso, pensado minimamente  durante o último trabalho da disciplina de Linguagem de Apresentação e Estruturação de Conteúdos 2, ministrada no 4º semestre do curso. O objetivo do mesmo é o de passar a maior quantidade de conhecimento nas diversas  área do curso para as novas turmas, sendo desde mini-cursos de linguagens de programação, estruturação e/ou estilização à até tutoriais de instalação de softwares que algum estudante está com dificuldades e necessita do mesmo para que seu aprendizado prossiga. Lembre-se, o aprendizado é algo muito poderoso, e se torna ainda mais quando é passado a diante!</p>
 					<!-- botões sessão de apresentação -->
 					<div class="botoes">
 						<a class="button" href="form_cadastro_user">Criar conta</a>
@@ -47,7 +62,7 @@
 				</div>
 			</section>
 			<!-- sessão cursos básicos -->
-			<section class="cursos">
+			<section class="cursos" id="cursos_tutoriais">
 				<h1>Cursos Básicos</h1>
 
 				<div class="curso">
@@ -55,42 +70,27 @@
 					<div class="curso-html">
 					<div class="top-html">
 						<img src="img/html-curso.png">
-						<h2>HTML Básico</h2>	
+						<h2><%=curso[0].nome_curso%></h2>	
 					</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et d3olore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p><%=curso[0].desc_curso%></p>
 					<a href="curso_html">Participar</a>
 				</div>
 				<!-- Curso CSS -->
 				<div class="curso-css">
 					<div class="top-css">
 						<img src="img/curso-css.png">
-						<h2>CSS Básico</h2>	
+						<h2>Instalação do Sublime Text 3</h2>	
 					</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et d3olore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco l aboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>Neste tutorial você irá aprender a instalar a IDE (Ambiente de desenvolvimento) Sublime Text 3. Tal tutorial tem o objetivo de auxiliar os estudantes que não tem muita familiaridade com instalação de softwares em suas máquinas, quebrando um pouco o medo de pegar vírus ou malwares. Tal IDE é totalmente segura, além de ser muito prática, rápida e de fácil utilização. Conta com suporte a diversas linguagens, tornando-se uma plataforma ideal para iniciantes.</p>
 						<a href="#">Participar</a>
 					</div>
 					<!-- Curso JS -->
 					<div class="curso-js">
 						<div class="top-js">
 							<img src="img/curso-js.png">
-							<h2>JavaScript Básico</h2>	
+							<h2>Como instalar o MySQL Workbench</h2>	
 						</div>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et d3olore magna aliqua. Ut enim ad minim veniam,
-							quis nostrud exercitation ullamco l aboris nisi ut aliquip ex ea commodo
-							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>O MySQL Workbench é uma ferramenta visual unificada para arquitetos de banco de dados. Ele fornece modelagem de dados, desenvolvimento de SQL e ferramentas abrangentes de administração para configuração de servidores, administração de usuários, backup e muito mais, sendo disponível no Windows, Linux e Mac OS X. Sua instalação se torna complexa por se tratar de um servidor com diversos módulos, por isso este tutorial visa facilitar o entendimento da instalação.</p>
 						<a href="#">Participar</a>
 					</div>
 				</div>
@@ -101,5 +101,7 @@
 			<p>&copy; Afonso Goiaba</p>
 			<a href="https://github.com/afonsogoiaba">github.com/afonsogoiaba</a>
 		</footer>
+		<script type="text/javascript" src="js/effect-roll.js"></script>
+		<script type="text/javascript" src="js/nav.js"></script>
 	</body>
 </html>

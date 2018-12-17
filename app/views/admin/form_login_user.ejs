@@ -15,11 +15,33 @@
   <body>
 		<!-- Cabeçalho -->
 		<header>
-      <a href="form_cadastro_user" class="esq-seta"><img src="img/voltar.png" width="40"></a>
-			<div class="logo">
-				<img src="img/logo-portwiki.png" width="40" height="40">
-				<a href="portwiki"><h1>Port<b>wiki</b></h1></a>
-			</div>
+      <div class="menu">
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <!-- "menu" -->
+          <div id="nav" class="overlay-content">
+            <a href="/portwiki">Home</a>
+            <a href="/form_cadastro_user">Cadastro</a>
+            <a href="/form_login_user">Login</a>
+          </div>
+        </div>
+          <a href="#">
+            <img src="img/menu.png" width="40" height="30" onclick="openNav()">
+          </a>
+      </div>
+
+      <div class="logo">
+        <img src="img/logo-portwiki.png" width="40" height="40">
+        <a href="portwiki"><h1>Port<b>wiki</b></h1></a>
+      </div>
+      <!-- Menu web-->
+      <nav>
+        <ul>
+          <li><a href="/portwiki">Home</a></li>
+          <li><a href="/form_cadastro_user">Cadastro</a></li>
+          <li><a href="/form_login_user">Login</a></li>
+        </ul>
+      </nav>
     </header>
     <!-- Conteudo -->
     <main>

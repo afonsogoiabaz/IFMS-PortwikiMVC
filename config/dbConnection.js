@@ -6,7 +6,7 @@ var connMySQL = function(){
     host: 'localhost',
     user: 'root',
     password: 'root',
-    database: 'usuario'
+    database: 'gestao_curso'
   });
 }
 

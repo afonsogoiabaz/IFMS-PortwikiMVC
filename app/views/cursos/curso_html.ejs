@@ -4,6 +4,7 @@
 		<title>Portwiki</title>
 		<!-- Links e metas -->
 		<meta charset="utf-8">
+    <base href="/">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/portwiki.css">
     <link rel="stylesheet" type="text/css" href="css/curso-html.css">
@@ -13,11 +14,33 @@
 	<body>
 		<!-- Cabeçalho -->
 		<header>
-			<a href="/" class="esq-seta"><img src="img/voltar.png"	width="40"></a>
-			<div class="logo">
-				<img src="img/logo-portwiki.png" width="40" height="40">
-				<a href="portwiki"><h1>Port<b>wiki</b></h1></a>
-			</div>
+      <div class="menu">
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <!-- "menu" -->
+          <div id="nav" class="overlay-content">
+            <a href="/portwiki">Home</a>
+            <a href="/form_cadastro_user">Cadastro</a>
+            <a href="/form_login_user">Login</a>
+          </div>
+        </div>
+          <a href="#">
+            <img src="img/menu.png" width="40" height="30" onclick="openNav()">
+          </a>
+      </div>
+
+      <div class="logo">
+        <img src="img/logo-portwiki.png" width="40" height="40">
+        <a href="portwiki"><h1>Port<b>wiki</b></h1></a>
+      </div>
+      <!-- Menu web-->
+      <nav>
+        <ul>
+          <li><a href="/portwiki">Home</a></li>
+          <li><a href="/form_cadastro_user">Cadastro</a></li>
+          <li><a href="/form_login_user">Login</a></li>
+        </ul>
+      </nav>
     </header>
     <!-- Fim cabeçalho -->
     
@@ -29,47 +52,50 @@
             <h2>Painel do curso</h2>
           </div>
           <ul>
-            <li><a href="#">Apresentação do curso básico de HTML, CSS e JS</a></li>
+            <%for(var i = 0 ; i < aula.length;i++){%>
+              <li><a href="/reload/<%=aula[i].id_aula%>"><%=aula[i].sub_titulo%></a></li>
+            <%}%>
           </ul>
         </div>
 
         <div class="main-layout">
-          <h2>Curso de HTML Básico</h2>
+          <h2><%=aula[0].nome_curso %></h2>
           <div class="main-vrau">
-            <div class="lista-aula">
-              <div class="aula">
-                <div class="top-aula">
-                  <img src="img/numero.png" width="40">
-                  <div class="texto">
-                    <p>Aula 1</p>
-                    <h3>Apresentação do curso básico de HTML, CSS & JavaScript</h3>
-                  </div>
-                </div>
-                <div class="curso">
-                  <p class="text-desc">
-                    Neste vídeo, você encontrará motivação para aprender a programar, criar sites e fazer disso sua profissão. Este é apenas um curso básico, não mostrando nem 50% do que se pode fazer com um conhecimento mais avançado sobre essas linguagens específicas. O nome do ministrante é Evandro Souza Falleiros, professor do IFMS Dourados.</p>
-                  <iframe width="900" height="500" src="https://www.youtube.com/embed/gtE6F2rr9Ho" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-              </div>
-            </div>
             <div class="info-curso">
               <h3>Informações do curso</h3>
               <ul>
-                <li><b>Nome: </b>Curso básico de HTML, CSS E JavaScript</li>
-                <li><b>Postagem: </b>Plataforma de vídeos Youtube</li>
-                <li><b>Horas aula: </b>Indefinido</li>
-                <li><b>Conteúdo: </b>HTML, CSS e JavaScript</li>
+                <li><b>Nome: </b><%=aula[0].nome_curso %></li>
+                <li><b>Postagem: </b><%=aula[0].postagem %></li>
+                <li><b>Conteúdo: </b><%=aula[0].conteudo %></li>
+                <li><b>Minutos/video: </b><%=aula[0].media_minutos %></li>
               </ul>
 
               <div class="linha"></div>
 
               <div class="autor-curso">
                 <img src="img/evandro.jpg" width="100">
-                <h3>Evandro Luís Souza Falleiros</h3>
-                <span>evandro.falleiros@ifms.edu.br</span>
-                <p>Professor do IFMS Campus Dourados, designer, desenvolvedor web e visionário.</p>
+                <h3><%=aula[0].nome %> <%=aula[0].sobrenome %></h3>
+                <span><%=aula[0].email %></span>
+                <p><%=aula[0].desc_usuario %></p>
               </div>
             </div>
+            
+            <div class="lista-aula">
+              <div class="aula">
+                <div class="top-aula">
+                  <img src="img/numero.png" width="40">
+                  <div class="texto"> 
+                    <p>Aula <%=aula[0].numero_aula %></p>
+                    <h3><%=aula[0].sub_titulo %></h3>
+                  </div>
+                </div>
+                <div class="curso">
+                  <p class="text-desc"><%=aula[0].desc_aula %></p>
+                  <iframe  src="<%=aula[0].link_video%>" width="900" height="500" frameborder="0"allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

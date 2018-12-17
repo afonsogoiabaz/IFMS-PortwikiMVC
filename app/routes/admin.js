@@ -10,6 +10,9 @@ module.exports = function(app){
 	app.get('/portwiki', function(req, res){
 		app.app.controllers.admin.portwiki(app, req, res);
 	});
+	app.get('/reload/:id_video',function(req,res){
+		app.app.controllers.admin.aula(app,req,res);
+	})
 
 
 	app.get('/curso_html', function(req, res){
